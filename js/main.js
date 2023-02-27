@@ -2,7 +2,7 @@ const pictures = ['01.webp', '02.webp', '03.webp', '04.webp', '05.webp'];
 const slider = document.querySelector('.slider');
 const sideSlider = document.querySelector('.side-slider');
 let active = 0;
-let content;
+
 
 for(let i = 0; i < pictures.length; i++){
     let item = document.createElement('div');
@@ -21,39 +21,65 @@ for(let i = 0; i < pictures.length; i++){
     sideItem.append(sidePicture);
 }
 
-const item = document.querySelectorAll('.item');
-const sideItem = document.querySelectorAll('.side-item');
+const items = document.querySelectorAll('.item');
+const sideItems = document.querySelectorAll('.side-item');
 
-item[active].classList.add('show');
-sideItem[active].classList.add('show');
+items[active].classList.add('show');
+sideItems[active].classList.add('show');
 
 const prev = document.querySelector('.next');
 const next = document.querySelector('.prev');
 
 prev.addEventListener('click', ()=>{
-    item[active].classList.remove('show');
-    sideItem[active].classList.remove('show');
-    if(active < item.length - 1){
+    items[active].classList.remove('show');
+    sideItems[active].classList.remove('show');
+    if(active < items.length - 1){
         active = active + 1;
     }else { //never ending carousel
         active = 0;
     }
-    item[active].classList.add('show');
-    sideItem[active].classList.add('show');
+    items[active].classList.add('show');
+    sideItems[active].classList.add('show');
 });
 
 
 next.addEventListener('click', ()=>{
-    item[active].classList.remove('show');
-    sideItem[active].classList.remove('show');
+    items[active].classList.remove('show');
+    sideItems[active].classList.remove('show');
     if(active > 0){
         active = active - 1;
     }else { //never ending carousel
-        active = item.length - 1;
+        active = items.length - 1;
     }
-    item[active].classList.add('show');
-    sideItem[active].classList.add('show');
+    items[active].classList.add('show');
+    sideItems[active].classList.add('show');
 });
+
+// Bonus3: at click on sidePictures set active on that i of pictures and sidePictures array
+
+// For Each method solution
+
+// sideItems.forEach((sideItem, index)=>{
+//     sideItem.addEventListener('click', ()=>{
+//         items[active].classList.remove('show');
+//         sideItems[active].classList.remove('show');
+//         active = index;
+//         items[active].classList.add('show');
+//         sideItems[active].classList.add('show');
+//     });
+// });
+
+// Regular For Loop solution 
+
+for(let i = 0; i < sideItems.length; i++){
+    sideItems[i].addEventListener('click', ()=>{
+        items[active].classList.remove('show');
+        sideItems[active].classList.remove('show');
+        active = i;
+        items[active].classList.add('show');
+        sideItems[active].classList.add('show');
+    })
+}
 
 
 

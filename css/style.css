@@ -36,9 +36,26 @@ body {
 
 .prev, .next {
     position: absolute;
+    padding: 0.9375rem;
+    background-color: rgba(169, 167, 167, 0.5);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
     left: 50%;
     transform: translate(-50%, 0);
     z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.prev:hover {
+    background-color: rgba(169, 167, 167, 1);
+}
+
+.next:hover {
+    background-color: rgba(169, 167, 167, 1);
 }
 
 .prev {
@@ -64,7 +81,8 @@ body {
 .side-item {
     width: 100%;
     height: calc(100% / 5);
-    opacity: 0.8;
+    opacity: 0.1;
+    cursor: pointer;
 }
 
 .img-fluid {
