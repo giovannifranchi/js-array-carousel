@@ -24,7 +24,7 @@ next.addEventListener('click', ()=>{
     item[active].classList.remove('show');
     if(active < item.length - 1){
         active = active + 1;
-    }else {
+    }else { //never ending carousel
         active = 0;
     }
     item[active].classList.add('show');
@@ -35,7 +35,7 @@ prev.addEventListener('click', ()=>{
     item[active].classList.remove('show');
     if(active > 0){
         active = active - 1;
-    }else {
+    }else { //never ending carousel
         active = item.length - 1;
     }
     item[active].classList.add('show');
