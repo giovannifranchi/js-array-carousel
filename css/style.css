@@ -11,27 +11,25 @@ body {
 
 .container {
     height: 100vh;
-    width: 60%;
+    width: 100%;
+    max-width: 42.5rem;
     margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: aqua;
 }
 
 .slider {
-    width: 70%;
+    width: 80%;
     height: 70%;
-    background-color: yellow;
     position: relative;
 }
 
 .side-slider {
     height: 70%;
-    width: 30%;
+    width: 20%;
     display: flex;
     flex-direction: column;
-    background-color: blueviolet;
 }
 
 .prev, .next {
@@ -94,7 +92,6 @@ body {
 .item {
     height: 100%;
     position: absolute;
-    position: absolute;
     top: 0;
     bottom: 0;
     right: 0;
@@ -106,7 +103,7 @@ body {
 .side-item {
     width: 100%;
     height: calc(100% / 5);
-    opacity: 0.1;
+    opacity: 0.4;
     cursor: pointer;
 }
 
@@ -114,7 +111,7 @@ body {
     height: 100%;
     width: 100%;
     object-fit: cover;
-    object-position: center;
+    object-position: right center;
 }
 
 .show {
