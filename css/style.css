@@ -1,23 +1,47 @@
+/* 
+--------------
+Reset
+--------------
+*/
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* 
+--------------
+Body
+--------------
+*/
+
 body {
     height: 100vh;
     background-color: #a9a7a7;
 }
 
+/* 
+--------------
+Container
+--------------
+*/
+
 .container {
     height: 100vh;
     width: 100%;
-    max-width: 42.5rem;
+    max-width: 50rem;
     margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+/* 
+--------------
+Slider & Side Slider
+--------------
+*/
 
 .slider {
     width: 80%;
@@ -106,6 +130,12 @@ body {
     opacity: 0.4;
     cursor: pointer;
 }
+
+/* 
+--------------
+Utilities
+--------------
+*/
 
 .img-fluid {
     height: 100%;
