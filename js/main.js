@@ -17,5 +17,29 @@ const item = document.querySelectorAll('.item');
 
 item[active].classList.add('show');
 
+const prev = document.querySelector('.next');
+const next = document.querySelector('.prev');
+
+next.addEventListener('click', ()=>{
+    item[active].classList.remove('show');
+    if(active < item.length - 1){
+        active = active + 1;
+    }else {
+        active = 0;
+    }
+    item[active].classList.add('show');
+});
+
+
+prev.addEventListener('click', ()=>{
+    item[active].classList.remove('show');
+    if(active > 0){
+        active = active - 1;
+    }else {
+        active = item.length - 1;
+    }
+    item[active].classList.add('show');
+});
+
 
 
