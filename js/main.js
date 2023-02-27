@@ -78,7 +78,7 @@ for(let i = 0; i < sideItems.length; i++){
         active = i;
         items[active].classList.add('show');
         sideItems[active].classList.add('show');
-    })
+    });
 }
 
 
